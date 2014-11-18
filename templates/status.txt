@@ -1,0 +1,2 @@
+Tracking ID: {{ g.ems_tid }}
+Channel: {{ g.ems_channel }}

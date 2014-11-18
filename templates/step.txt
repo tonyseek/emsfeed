@@ -1,0 +1,5 @@
+日期 Date: {{ step.date }}
+地點 Location: {{ step.location }}
+狀態 Milestone: {{ step.milestone }}
+原因 Reason: {{ step.reason }}
+備註 Remark: {{ step.remark }}
