@@ -1,3 +1,5 @@
+from __future__ import print_function, unicode_literals, absolute_import
+
 from collections import namedtuple
 from hashlib import sha1
 from datetime import datetime
@@ -40,11 +42,12 @@ class TrackingInfo(Dinergate):
         xpath='//*[@id="div1"]/table/tr[1]/td/table/tr', pick_mode='keep')
 
     def __init__(self, channel, tid):
-        super().__init__(request=None, channel=channel, tid=tid)
+        super(TrackingInfo, self).__init__(
+            request=None, channel=channel, tid=tid)
 
     @property
     def title(self):
-        return 'EMS - {0}:{1}'.format(self.channel.upper(), self.tid)
+        return 'EMS-{0} {1}'.format(self.channel.upper(), self.tid)
 
     @property
     def steps(self):
